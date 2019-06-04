@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FlaskTrial</title>
+	<link rel="stylesheet" type="text/css" href="/static/home.css">
+
+	<script>
+  		function openForm() {
+  			document.getElementById("blur").style.display = "block";  
+  			document.getElementById("student_login").style.display="none";
+  			document.getElementById("faculty_login").style.display="none";
+  			document.getElementById("admin_login").style.display="none";
+ 
+		}
+
+		function closeForm() {
+  			document.getElementById("blur").style.display = "none";
+  			document.getElementById("student_login").style.display="block";
+  			document.getElementById("faculty_login").style.display="block";
+  			document.getElementById("admin_login").style.display="block";
+  
+		}
+	</script>
+</head>
+
+<body>
+
+ <div class="header">
+   
+   <a href="#" id="headerlink">Contact Us</a>
+   <a href="#" id="headerlink">About</a>
+   <a href="#login_section" id="headerlink" >Login</a>
+  
+ </div>
+
+ <section class="section section-light" >    
+    
+	<div class= "title">
+		<h1 id="t">FACULTY FEEDBACK SYSTEM</h1>
+	</div>
+
+  </section>
+<section class="section section-dark" id="login_section">
+
+	<h2 id="login">L O G I N</h2>
+
+
+   <div class="logincontainer">
+
+		<button id="student_login" type="button" onclick="openForm()">STUDENT</button>
+   </div>
+
+    <div class="logincontainer">
+   		<button id="faculty_login" type="button" onclick="openForm()">FACULTY</button>
+    </div>
+
+    <div class="logincontainer">   
+   		<button id="admin_login" type="button" onclick="openForm()">ADMIN</button>
+    </div>
+</section>
+
+<div id="blur" id="blur">
+	<div class="loginbox" id="myform">
+         <div id="close">&times;</div>
+         <script type="text/javascript">
+         	var closeBtn= document.getElementById('close');
+           closeBtn.addEventListener('click',closeForm);
+         </script>
+		<img src="/static/avatar.jpg" class="avatar">
+		<h1 id="form_h1">L O G I N</h1>
+		<form method="post" action=" "class="popup">
+			
+			<p>Username</p>
+			<input type="text" name="username" placeholder="Enter Username">
+			<P>Password</P>
+			<input type="password" name="password" placeholder="Enter Password">
+			<button type="submit" id="submit" name="login_user" onclick="closeForm()" on>Login</button>
+			<a href="#">Forgot Password</a></br>
+			<a href="register.php">Create Account</a>
+
+		</form>
+	</div>
+</div>
+
+
+</body>
+</html>
